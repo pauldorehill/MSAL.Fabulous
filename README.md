@@ -1,5 +1,5 @@
-# Fabulous MSAL
-Example Fabulous app that uses [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) to authenticate a user on Azure Active Directory.
+# Fabulous MSAL (Microsoft Authentication Library)
+Example Fabulous app that uses [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) to authenticate an user on Azure Active Directory.
 
 Feedback is welcome.
 
