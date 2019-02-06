@@ -1,11 +1,9 @@
 ﻿namespace MSAL.Fabulous
 
-open System.Diagnostics
 open Fabulous.Core
 open Fabulous.DynamicViews
 open Xamarin.Forms
 open FSharp.Azure.MSAL
-open Microsoft.Identity.Client
 
 module App =
 
@@ -22,11 +20,9 @@ module App =
     let clientId = ClientId "Enter_the_Application_Id_here"
     let tenantId = TenantId "Enter_the_Tenant_Info_Here"
 
-    // Put your scopes here
     // https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent
     // https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Acquiring-tokens-interactively#how-to-get-consent-for-several-resources
     let scopes = ["insert your scopes here"]
-
 
     let initModel platform = 
         // No GUI running yet so can call here blocking
@@ -37,7 +33,7 @@ module App =
         { SignInStatus = signInStatus }
 
     let init platform () = initModel platform, Cmd.none
-        
+
     let signIn (model : Model) =
         async { 
             let! s = model.SignInStatus.SignIn scopes
