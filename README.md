@@ -1,6 +1,8 @@
 # Fabulous MSAL (Microsoft Authentication Library)
 Example Fabulous app that uses [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet) to authenticate a user on Azure Active Directory.
 
+### NOTE: At the time I wrote this `Microsoft.Identity.Client 2.7.0` was all that was available. It is now up to `4.` and has had substantial changes to the API. I will revisit this in the coming months, but the changes are substantial. 
+
 Feedback is welcome.
 
 When I first started trying to use MSAL it was working great for WPF (not sure why), but failing on Android/UWP: from investigating more it was down to blocking on the UI thread by using `Async.RunSynchronously`. Typically when waiting for a task to return I would write something like:
